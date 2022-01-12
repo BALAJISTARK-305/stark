@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+
+.content {
+    margin: 0 auto;
+    width: 500px;
+}
+
+table, td, th {
+    border: 1px solid rgb(219, 8, 238);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color:darksalmon;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form ,h3{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+input{
+    margin: 7px;
+}
+
+#content,#quantity {
+    width: 70%;
+}
+#button {
+    width: 30%;
+    
+}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Stationery</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Stationery</h1>
+    {% if tasks|length < 1 %} <h4 style="text-align: center">There are no items. Add one below!</h4>
+        {% else %}
+        <table>
+            <tr>
+                <th>Items</th>
+                <th>Quantity</th>
+                <th>Added</th>
+                <th>Actions</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{task.quantity}}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        <h3>Add Items</h3>
+        <div class="form">
+            <form action="/" method="POST">
+                <input type="text" name="content" id="content" placeholder="Item Name"><br>
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity"><br>
+                <input type="submit" value="Add Item" name="button" id="button">
+            </form>
+        </div>
+</div>
+{% endblock %}
