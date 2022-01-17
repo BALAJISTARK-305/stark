@@ -1,22 +1,27 @@
 body, html {
     margin: 0;
     font-family: sans-serif;
-    background-color: lightblue;
+}
+body{
+    background-image:url(/static/images/bac.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
 }
 
 .content {
     margin: 0 auto;
-    width: 500px;
+    width: 750px;
 }
 
 table, td, th {
-    border: 1px solid rgb(219, 8, 238);
+    border: 2px solid rgb(21, 19, 49);
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    background-color:darksalmon;
+    background-color:rgb(165, 229, 245);
 }
 
 th {
@@ -28,12 +33,18 @@ td {
     padding: 5px;
 }
 
-.form ,h3{
+.form{
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
+    background-color: aquamarine;
+    border: 3px solid rgb(238, 8, 8);
+    width: 500px;
 }
 input{
-    margin: 7px;
+    margin:7px;
+}
+h3{
+    margin: 10px;
 }
 
 #content,#quantity {
@@ -41,5 +52,7 @@ input{
 }
 #button {
     width: 30%;
+    background-color: brown;
+    color: aliceblue;
     
 }
